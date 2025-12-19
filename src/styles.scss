@@ -1,7 +1,13 @@
+@font-face {
+  font-family: 'Anta';
+  src: url('/fonts/Anta-Regular.ttf') format('truetype');
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Anta', sans-serif;
 }
 
 body {
