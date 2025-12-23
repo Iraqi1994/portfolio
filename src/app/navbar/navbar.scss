@@ -25,9 +25,17 @@ nav {
     text-decoration: none;
     font-size: 24px;
     margin: 0 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    &:hover {
+      color: #f8f5ec;
+    }
   }
 }
 
 .language-buttons {
-  gap: 16px;
+  > span {
+    padding-left: 8px;
+    gap: 16px;
+  }
 }
