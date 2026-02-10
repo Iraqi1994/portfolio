@@ -1,0 +1,60 @@
+h1 {
+  color: #89bcd9;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.my-projects {
+  color: #f8f5ec;
+  padding: 0 150px;
+}
+
+.project-names {
+  color: #89bcd8;
+  font-size: 30px;
+  display: flex;
+  gap: 48px;
+  padding-bottom: 32px;
+  > div {
+    &:hover {
+      cursor: pointer;
+      color: #f8f5ec;
+    }
+  }
+}
+
+.project-details {
+  background-color: #2d383f;
+  margin-left: -150px;
+  margin-right: -150px;
+  padding-left: 150px;
+  padding-right: 150px;
+  display: flex;
+}
+
+.project-details-headlines {
+  padding: 16px 0;
+}
+
+.project-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.technology-headline {
+  padding-top: 16px;
+}
+
+.technologies-symbols {
+  display: flex;
+  gap: 16px;
+}
+
+.link-and-github {
+  display: flex;
+  gap: 32px;
+}

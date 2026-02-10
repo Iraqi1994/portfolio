@@ -4,10 +4,11 @@ import { RouterOutlet } from '@angular/router';
 import { Atf } from './atf/atf';
 import { WhyMeSection } from './why-me-section/why-me-section';
 import { MySkills } from './my-skills/my-skills';
+import { MyProjects } from './my-projects/my-projects';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, Atf, WhyMeSection, MySkills],
+  imports: [RouterOutlet, CommonModule, Atf, WhyMeSection, MySkills, MyProjects],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
