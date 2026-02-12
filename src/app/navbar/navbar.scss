@@ -3,19 +3,32 @@ nav {
   width: 100vw;
   max-width: 100%;
   background-color: #89bcd9;
-  position: sticky;
-  top: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 150px;
+  transition: all 0.3s ease-in-out;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    bottom: auto;
+  }
 }
 
 .aft-logo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
+  color: #262e34;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .nav-links {
@@ -24,10 +37,20 @@ nav {
     text-decoration: none;
     font-size: 24px;
     margin: 0 16px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 12px 40px;
+    position: relative;
+    transition: color 0.3s ease;
+
     &:hover {
       color: #f8f5ec;
+    }
+
+    &.active {
+      color: #f8f5ec;
+      background-image: url('/img/ellipse-nav.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 }

@@ -1,13 +1,13 @@
-<nav>
-  <div class="aft-logo-container">
+<nav [class.sticky]="isSticky">
+  <a href="#atf" class="aft-logo-container">
     <img src="img/logo-dark.png" alt="" />
     <span>H.Iraqi</span>
     <span>developer</span>
-  </div>
+  </a>
   <div class="nav-links">
-    <a href="">Why me</a>
-    <a href="">Skills</a>
-    <a href="">Projects</a>
+    <a href="#whyMe" [class.active]="activeSection === 'whyMe'">Why me</a>
+    <a href="#mySkills" [class.active]="activeSection === 'mySkills'">Skills</a>
+    <a href="#myProjects" [class.active]="activeSection === 'myProjects'">Projects</a>
     <a href="">Contact</a>
   </div>
   <div class="language-buttons">
