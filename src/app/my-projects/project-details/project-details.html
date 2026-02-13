@@ -1,0 +1,36 @@
+<div class="project-details-container">
+  <div class="project-details">
+    <div class="about-the-project">
+      <h3 class="project-details-headlines">About the project</h3>
+      <p>This App is a Slack Clone App.</p>
+      <span>
+        {{ projectData.aboutTheProject }}
+      </span>
+    </div>
+    <div class="work-process">
+      <h3 class="project-details-headlines">How I have organized my work process</h3>
+      <span>
+        {{ projectData.workProcess }}
+      </span>
+    </div>
+    <div class="group-experience">
+      <h3 class="project-details-headlines">My group work experience</h3>
+      <span>
+        {{ projectData.workExperience }}
+      </span>
+    </div>
+  </div>
+  <div class="project-links">
+    <p class="technology-headline">Technologies</p>
+    <div class="technologies-symbols">
+      <img src="img/angular-small.png" alt="" />
+      <img src="img/typescript-small.png" alt="" />
+      <img src="img/firebase-small.png" alt="" />
+    </div>
+    <img [src]="projectData.projectImage" alt="" />
+    <div class="link-and-github">
+      <button class="live-test">Live Test</button>
+      <button class="github">GitHub</button>
+    </div>
+  </div>
+</div>

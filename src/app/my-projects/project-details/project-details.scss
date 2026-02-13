@@ -1,0 +1,64 @@
+.project-details-container {
+  background-color: #2d383f;
+  margin-left: -150px;
+  margin-right: -150px;
+  padding-left: 150px;
+  padding-right: 150px;
+  display: flex;
+}
+
+.project-details {
+  width: 50%;
+  padding-right: 24px;
+}
+
+.project-details-headlines {
+  padding: 16px 0;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-left: 24px;
+}
+
+.technology-headline {
+  padding-top: 16px;
+}
+
+.technologies-symbols {
+  display: flex;
+  gap: 16px;
+}
+
+.link-and-github {
+  display: flex;
+  gap: 32px;
+
+  > button {
+    cursor: pointer;
+    font-size: 18px;
+    padding: 13px 30px;
+    border-radius: 30px;
+  }
+
+  .live-test {
+    color: #262e34;
+    background-color: #89bcd8;
+    border: 1px solid #89bcd8;
+    &:hover {
+      background-color: #f8f5ec;
+    }
+  }
+
+  .github {
+    color: #89bcd8;
+    background-color: #2d383f;
+    border: 1px solid #89bcd8;
+    &:hover {
+      background-color: #3f454a;
+    }
+  }
+}
