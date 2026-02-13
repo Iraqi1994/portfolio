@@ -36,14 +36,53 @@ h1 {
   gap: 16px;
   width: 500px;
   padding-left: 24px;
-  background-image: url('/img/ellipse.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   min-height: 400px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/img/ellipse.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/img/ellipse-glow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
 
   > div {
     max-width: 300px;
     text-align: center;
+    position: relative;
+    z-index: 1;
   }
 }
