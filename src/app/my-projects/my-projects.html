@@ -1,10 +1,42 @@
 <h1>My Projects</h1>
 <div class="my-projects">
   <div class="project-names">
-    <div class="project-name active-project">1. DA Bubble</div>
-    <div class="project-name">2. El Pollo Loco</div>
-    <div class="project-name">3. Join</div>
-    <div class="project-name">4. Ongoing Project</div>
+    <div
+      class="project-name"
+      [class.active-project]="activeProjectIndex() === 0"
+      (click)="setActiveProject(0)"
+    >
+      1. DA Bubble
+    </div>
+    <div
+      class="project-name"
+      [class.active-project]="activeProjectIndex() === 1"
+      (click)="setActiveProject(1)"
+    >
+      2. El Pollo Loco
+    </div>
+    <div
+      class="project-name"
+      [class.active-project]="activeProjectIndex() === 2"
+      (click)="setActiveProject(2)"
+    >
+      3. Join
+    </div>
+    <div
+      class="project-name"
+      [class.active-project]="activeProjectIndex() === 3"
+      (click)="setActiveProject(3)"
+    >
+      4. Ongoing Project
+    </div>
   </div>
-  <app-project-details [projectData]="daBubbleDetails"></app-project-details>
+  <app-project-details [class.d_none]="activeProjectIndex() !== 0" [projectData]="daBubbleDetails">
+  </app-project-details>
+  <app-project-details
+    [class.d_none]="activeProjectIndex() !== 1"
+    [projectData]="elPolloLocoDetails"
+  >
+  </app-project-details>
+  <app-project-details [class.d_none]="activeProjectIndex() !== 2" [projectData]="joinDetails">
+  </app-project-details>
 </div>
