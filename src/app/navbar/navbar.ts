@@ -43,7 +43,6 @@ export class Navbar {
         this.activeSection = '';
       }
     }
-
     this.lastScrollPosition = currentScrollPosition;
   }
 }
