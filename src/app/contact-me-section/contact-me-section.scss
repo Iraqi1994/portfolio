@@ -5,3 +5,138 @@ h1 {
   margin-top: 128px;
   margin-bottom: 64px;
 }
+
+.description-contact-info {
+  color: #f8f5ec;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 32px;
+
+  .description,
+  .contact-info {
+    width: 445px;
+  }
+
+  .contact-info {
+    padding-left: 16px;
+    div {
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  label {
+    color: #89bcd9;
+    display: block;
+    padding-left: 32px;
+    font-size: 14px;
+  }
+
+  .input-row {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  input,
+  textarea {
+    color: #89bcd9;
+    border: 1px solid #89bcd9;
+    border-radius: 30px;
+    background-color: #262e34;
+    cursor: pointer;
+    padding-left: 32px;
+    caret-color: #f8f5ec;
+    transition: all 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border: 1px solid #89bcd9;
+      background-color: #89bcd91f;
+    }
+  }
+
+  input {
+    width: 445px;
+    height: 60px;
+  }
+
+  textarea {
+    width: 922px;
+    height: 145px;
+    resize: none;
+    padding-top: 16px;
+  }
+
+  .checkbox-wrapper {
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    input[type='checkbox'] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding-left: 0;
+      gap: 12px;
+    }
+
+    .checkbox-custom {
+      width: 24px;
+      height: 24px;
+      background-image: url('/img/checkbox.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      flex-shrink: 0;
+    }
+
+    input[type='checkbox']:hover + label .checkbox-custom {
+      background-image: url('/img/checkbox-hover.svg');
+    }
+
+    input[type='checkbox']:checked + label .checkbox-custom {
+      background-image: url('/img/checkbox-checked.svg');
+    }
+
+    .checkbox-text {
+      color: #f8f5ec;
+      font-size: 14px;
+    }
+  }
+
+  button {
+    color: #8f9290;
+    width: 100px;
+    height: 48px;
+    border: 1px solid #8f9290;
+    border-radius: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: block;
+    margin-left: auto;
+
+    &:hover {
+      background-color: #89bcd91f;
+    }
+  }
+}
