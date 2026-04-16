@@ -7,6 +7,7 @@ import { MySkills } from './my-skills/my-skills';
 import { MyProjects } from './my-projects/my-projects';
 import { TeamplayerSection } from './teamplayer-section/teamplayer-section';
 import { ContactMeSection } from './contact-me-section/contact-me-section';
+import { Footer } from './footer/footer';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ import { ContactMeSection } from './contact-me-section/contact-me-section';
     MyProjects,
     TeamplayerSection,
     ContactMeSection,
+    Footer,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',

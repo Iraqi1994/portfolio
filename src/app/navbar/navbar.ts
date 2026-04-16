@@ -27,7 +27,7 @@ export class Navbar {
 
     if (this.isSticky) {
       let foundSection = false;
-      const sections = ['whyMe', 'mySkills', 'myProjects'];
+      const sections = ['whyMe', 'mySkills', 'myProjects', 'contactMe'];
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
         if (element) {

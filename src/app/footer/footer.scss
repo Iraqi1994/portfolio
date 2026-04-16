@@ -1,0 +1,69 @@
+footer {
+  height: 150px;
+  width: 100%;
+  background-color: #89bcd9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 150px;
+  color: #262e34;
+}
+
+.legal-info {
+  display: flex;
+  flex-direction: column;
+
+  > a {
+    color: #262e34;
+    text-decoration: none;
+
+    &:hover {
+      color: #f8f5ec;
+    }
+  }
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+
+  .social-icon {
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: background-image 0.2s ease;
+
+    &.github {
+      background-image: url('/img/github-button-dark.svg');
+
+      &:hover {
+        background-image: url('/img/github-button-dark-hover.svg');
+      }
+    }
+
+    &.email {
+      background-image: url('/img/email-button-dark.svg');
+
+      &:hover {
+        background-image: url('/img/email-button-dark-hover.svg');
+      }
+    }
+
+    &.linkedin {
+      background-image: url('/img/linkedin-button-dark.svg');
+
+      &:hover {
+        background-image: url('/img/linkedin-button-dark-hover.svg');
+      }
+    }
+  }
+}
