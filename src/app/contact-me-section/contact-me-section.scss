@@ -42,12 +42,31 @@ form {
     display: block;
     padding-left: 32px;
     font-size: 14px;
+
+    &.error {
+      color: #ff4444;
+    }
   }
 
   .input-row {
     display: flex;
     gap: 32px;
     margin-bottom: 32px;
+  }
+
+  .input-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .done-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
   }
 
   input,
@@ -66,6 +85,21 @@ form {
       border: 1px solid #89bcd9;
       background-color: #89bcd91f;
     }
+
+    &.error {
+      border-color: #ff4444;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 60px #262e34 inset !important;
+      -webkit-text-fill-color: #89bcd9 !important;
+      border: 1px solid #89bcd9 !important;
+      caret-color: #f8f5ec;
+      transition: background-color 5000s ease-in-out 0s;
+    }
   }
 
   input {
@@ -83,6 +117,7 @@ form {
   .checkbox-wrapper {
     margin-top: 16px;
     margin-bottom: 16px;
+    position: relative;
 
     input[type='checkbox'] {
       position: absolute;
@@ -117,9 +152,22 @@ form {
       background-image: url('/img/checkbox-checked.svg');
     }
 
+    input[type='checkbox'] + label.error .checkbox-custom {
+      background-image: url('/img/checkbox-required.svg');
+    }
+
     .checkbox-text {
       color: #f8f5ec;
       font-size: 14px;
+    }
+
+    .checkbox-error {
+      color: #ff4444;
+      font-size: 14px;
+      position: absolute;
+      top: 100%;
+      left: 36px;
+      margin-top: 4px;
     }
   }
 

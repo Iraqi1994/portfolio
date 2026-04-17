@@ -14,26 +14,89 @@
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <div class="input-row">
       <div>
-        <label for="name">Your name</label>
-        <input type="text" id="name" formControlName="name" required />
+        <label
+          for="name"
+          [class.error]="contactForm.get('name')?.touched && contactForm.get('name')?.invalid"
+          >Your name{{
+            contactForm.get('name')?.touched && contactForm.get('name')?.invalid
+              ? ' is required'
+              : ''
+          }}</label
+        >
+        <div class="input-wrapper">
+          <input
+            type="text"
+            id="name"
+            formControlName="name"
+            required
+            [class.error]="contactForm.get('name')?.touched && contactForm.get('name')?.invalid"
+          />
+          @if (contactForm.get('name')?.touched && contactForm.get('name')?.valid) {
+            <img src="/img/done.svg" alt="Valid" class="done-icon" />
+          }
+        </div>
       </div>
       <div>
-        <label for="email">Your email</label>
-        <input type="email" id="email" formControlName="email" required />
+        <label
+          for="email"
+          [class.error]="contactForm.get('email')?.touched && contactForm.get('email')?.invalid"
+          >Your email{{
+            contactForm.get('email')?.touched && contactForm.get('email')?.invalid
+              ? ' is required'
+              : ''
+          }}</label
+        >
+        <div class="input-wrapper">
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            required
+            [class.error]="contactForm.get('email')?.touched && contactForm.get('email')?.invalid"
+          />
+          @if (contactForm.get('email')?.touched && contactForm.get('email')?.valid) {
+            <img src="/img/done.svg" alt="Valid" class="done-icon" />
+          }
+        </div>
       </div>
     </div>
     <div>
-      <label for="message">Your message</label>
-      <textarea id="message" formControlName="message" rows="5" required></textarea>
+      <label
+        for="message"
+        [class.error]="contactForm.get('message')?.touched && contactForm.get('message')?.invalid"
+        >Your message{{
+          contactForm.get('message')?.touched && contactForm.get('message')?.invalid
+            ? ' is required'
+            : ''
+        }}</label
+      >
+      <div class="input-wrapper">
+        <textarea
+          id="message"
+          formControlName="message"
+          rows="5"
+          required
+          [class.error]="contactForm.get('message')?.touched && contactForm.get('message')?.invalid"
+        ></textarea>
+        @if (contactForm.get('message')?.touched && contactForm.get('message')?.valid) {
+          <img src="/img/done.svg" alt="Valid" class="done-icon" />
+        }
+      </div>
     </div>
     <div class="checkbox-wrapper">
       <input type="checkbox" id="privacy" formControlName="privacy" required />
-      <label for="privacy">
+      <label
+        for="privacy"
+        [class.error]="contactForm.get('privacy')?.touched && contactForm.get('privacy')?.invalid"
+      >
         <span class="checkbox-custom"></span>
         <span class="checkbox-text"
           >I've read the privacy policy and agree to the processing of my data as outlined.</span
         >
       </label>
+      @if (contactForm.get('privacy')?.touched && contactForm.get('privacy')?.invalid) {
+        <div class="checkbox-error">Please accept the privacy policy.</div>
+      }
     </div>
     <button
       type="submit"
