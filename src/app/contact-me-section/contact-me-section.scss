@@ -126,12 +126,17 @@ form {
       height: 0;
     }
 
-    label {
+    .checkbox-label {
       display: flex;
       align-items: center;
-      cursor: pointer;
       padding-left: 0;
       gap: 12px;
+    }
+
+    label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
     }
 
     .checkbox-custom {
@@ -144,21 +149,26 @@ form {
       flex-shrink: 0;
     }
 
-    input[type='checkbox']:hover + label .checkbox-custom {
+    input[type='checkbox']:hover + .checkbox-label label .checkbox-custom {
       background-image: url('/img/checkbox-hover.svg');
     }
 
-    input[type='checkbox']:checked + label .checkbox-custom {
+    input[type='checkbox']:checked + .checkbox-label label .checkbox-custom {
       background-image: url('/img/checkbox-checked.svg');
     }
 
-    input[type='checkbox'] + label.error .checkbox-custom {
+    input[type='checkbox'] + .checkbox-label.error label .checkbox-custom {
       background-image: url('/img/checkbox-required.svg');
     }
 
     .checkbox-text {
       color: #f8f5ec;
       font-size: 14px;
+
+      > a {
+        text-decoration: none;
+        color: #89bcd9;
+      }
     }
 
     .checkbox-error {

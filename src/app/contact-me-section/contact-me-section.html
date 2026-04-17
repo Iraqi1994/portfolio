@@ -85,15 +85,18 @@
     </div>
     <div class="checkbox-wrapper">
       <input type="checkbox" id="privacy" formControlName="privacy" required />
-      <label
-        for="privacy"
+      <div
         [class.error]="contactForm.get('privacy')?.touched && contactForm.get('privacy')?.invalid"
+        class="checkbox-label"
       >
-        <span class="checkbox-custom"></span>
+        <label for="privacy">
+          <span class="checkbox-custom"></span>
+        </label>
         <span class="checkbox-text"
-          >I've read the privacy policy and agree to the processing of my data as outlined.</span
+          >I've read the <a href="#">privacy policy</a> and agree to the processing of my data as
+          outlined.</span
         >
-      </label>
+      </div>
       @if (contactForm.get('privacy')?.touched && contactForm.get('privacy')?.invalid) {
         <div class="checkbox-error">Please accept the privacy policy.</div>
       }
