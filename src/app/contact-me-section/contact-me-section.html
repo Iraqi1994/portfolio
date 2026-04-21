@@ -1,4 +1,15 @@
-<h1>Contact Me</h1>
+<div class="header-wrapper">
+  <h1>Contact Me</h1>
+  <a
+    href="#atf"
+    aria-label="Scroll to top"
+    class="arrow-up-link"
+    (mouseenter)="setArrowHover(true)"
+    (mouseleave)="setArrowHover(false)"
+  >
+    <img class="arrow-up" [src]="arrowImageSrc()" alt="" />
+  </a>
+</div>
 <div class="description-contact-info">
   <div class="description">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nulla voluptate cum? Quo quis neque

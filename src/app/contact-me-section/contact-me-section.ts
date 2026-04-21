@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal, computed } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
@@ -11,6 +11,15 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 export class ContactMeSection {
   private fb = inject(FormBuilder);
   private http = inject(HttpClient);
+
+  arrowHovered = signal(false);
+  arrowImageSrc = computed(() =>
+    this.arrowHovered() ? 'img/arrow-up-hover.svg' : 'img/arrow-up.svg',
+  );
+
+  setArrowHover(hovered: boolean) {
+    this.arrowHovered.set(hovered);
+  }
 
   contactForm = this.fb.group({
     name: ['', Validators.required],
