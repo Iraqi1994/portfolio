@@ -13,9 +13,14 @@
         <h1>Hussein Iraqi</h1>
         <h2>FRONTEND DEVELOPER</h2>
       </div>
-      <div>
-        <img class="arrow-down" src="img/arrow-down.png" alt="" />
-      </div>
+      <a
+        href="#whyMe"
+        aria-label="Scroll to Why Me section"
+        (mouseenter)="setArrowHover(true)"
+        (mouseleave)="setArrowHover(false)"
+      >
+        <img class="arrow-down" [src]="arrowImageSrc()" alt="" />
+      </a>
     </div>
   </div>
   <div class="atf-socials">

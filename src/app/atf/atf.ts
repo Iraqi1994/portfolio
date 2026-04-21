@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
 import { Navbar } from '../navbar/navbar';
 
 @Component({
@@ -7,4 +7,13 @@ import { Navbar } from '../navbar/navbar';
   templateUrl: './atf.html',
   styleUrl: './atf.scss',
 })
-export class Atf {}
+export class Atf {
+  arrowHovered = signal(false);
+  arrowImageSrc = computed(() =>
+    this.arrowHovered() ? 'img/arrow-down-hover.png' : 'img/arrow-down.png',
+  );
+
+  setArrowHover(hovered: boolean) {
+    this.arrowHovered.set(hovered);
+  }
+}
