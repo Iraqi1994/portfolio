@@ -2,7 +2,6 @@
   <div class="project-details">
     <div class="about-the-project">
       <h3 class="project-details-headlines">About the project</h3>
-      <p>This App is a Slack Clone App.</p>
       <span>
         {{ projectData.aboutTheProject }}
       </span>
@@ -13,12 +12,14 @@
         {{ projectData.workProcess }}
       </span>
     </div>
-    <div class="group-experience">
-      <h3 class="project-details-headlines">My group work experience</h3>
-      <span>
-        {{ projectData.workExperience }}
-      </span>
-    </div>
+    @if (projectData.workExperience) {
+      <div class="group-experience">
+        <h3 class="project-details-headlines">My group work experience</h3>
+        <span>
+          {{ projectData.workExperience }}
+        </span>
+      </div>
+    }
   </div>
   <div class="project-links">
     <p class="technology-headline">Technologies</p>
