@@ -37,7 +37,7 @@ export class MyProjects {
     workProcess:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. At cumque voluptate natus placeat unde laboriosam quam officia ducimus sunt, molestias eveniet dolores exercitationem maiores tempore aspernatur. Expedita ratione fugit voluptatibus?',
     workExperience: '',
-    projectImage: 'img/screenshot-dabubble.png',
+    projectImage: 'img/el-pollo-loco.png',
   };
 
   joinDetails: projectDetailsType = {
@@ -47,7 +47,7 @@ export class MyProjects {
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. At cumque voluptate natus placeat unde laboriosam quam officia ducimus sunt, molestias eveniet dolores exercitationem maiores tempore aspernatur. Expedita ratione fugit voluptatibus?',
     workExperience:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. At cumque voluptate natus placeat unde laboriosam quam officia ducimus sunt, molestias eveniet dolores exercitationem maiores tempore aspernatur. Expedita ratione fugit voluptatibus?',
-    projectImage: 'img/screenshot-dabubble.png',
+    projectImage: 'img/join.png',
   };
 
   iotDashboardDetails: projectDetailsType = {
